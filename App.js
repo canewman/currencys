@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Header from './header.js';
+import Footer from './footer.js';
+import Card from './card.js';
+
+var address = 'https://api.currencyscoop.com/v1/currencies?api_key=a069d8f602f2ba4be081d0b4700910e7&type=fiat'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
       </header>
+      <Card />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
